@@ -70,13 +70,46 @@ function ready() {
         button.addEventListener("click", addCartClicked);
     }
 
+// Function to redirect to checkout page with cart details
+function redirectToCheckout() {
+    if (cart.length > 0) {
+        // Convert cart array to JSON string
+        var cartJSON = JSON.stringify(cart);
+        // Redirect to checkout.php with cart data as query parameter
+        window.location.href = 'checkout.php?cart=' + encodeURIComponent(cartJSON);
+    } else {
+        alert('Your cart is empty. Please add some items before checkout.');
+    }
+}
     // Buy Button Works
     document.getElementsByClassName("btn-buy")[0].addEventListener("click", buyButtonClicked);
 }
+// Initialize cart array to store items
+var cart = [];
 
+// Function to handle adding product to cart
+function addCartClicked(element) {
+    var productBox = element.closest('.box');
+    var productName = productBox.querySelector('.product-title').innerText;
+    var productPrice = productBox.querySelector('.price').innerText.trim(); // Remove any leading/trailing whitespace
+    var productSize = productBox.querySelector('.size-select').value;
+
+    var item = {
+        name: productName,
+        price: productPrice,
+        size: productSize
+    };
+
+    cart.push(item); // Add item to the cart array
+
+    // Optional: Display a confirmation or update the UI to indicate the product has been added to cart
+    console.log('Added to cart:', item);
+
+    // Update the cart display
+    updateCartDisplay();
+}
 // Function for "Buy Button Works"
 function buyButtonClicked() {
-    alert('Your order is placed! Thank you for buying and enjoy your coffee!');
     var cartContent = document.getElementsByClassName("cart-content")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var orderDetails = [];
@@ -157,7 +190,15 @@ function addCartClicked(button) {
     var size = shopProducts.getElementsByClassName("form-select")[0].value; // Get the selected size
     addProductToCart(title, price, productImg, size);
     updateTotal();
-}
+  
+    // Store product details in session storage
+    var chosenProduct = {
+      id: title, // Assuming title uniquely identifies the product
+      price: price,
+      size: size
+    };
+    sessionStorage.setItem("chosenProduct", JSON.stringify(chosenProduct));
+  }
 
 function addProductToCart(title, price, productImg, size) {
     var cartShopBox = document.createElement("div");

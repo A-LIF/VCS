@@ -20,3 +20,51 @@ header {
     padding-right: 15px; /* Adjust padding for columns */
     padding-left: 15px; /* Adjust padding for columns */
 }
+
+.size-select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.payment-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.delivery-form {
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    margin-top: 20px;
+}
+
+.size-select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.product-details {
+    background-color: #f8f9fa; /* Example background color */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.credit-card-form {
+    background-color: #f8f9fa; /* Example background color */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adjust as needed */
+}

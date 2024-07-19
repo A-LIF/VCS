@@ -45,12 +45,6 @@
                             <a href="#menu" class="text-decoration-none">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#gallery"class="text-decoration-none">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#blogs" class="text-decoration-none">Blogs</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="#contact" class="text-decoration-none">Contact</a>
                         </li>
                         <li class="nav-item">
@@ -60,16 +54,10 @@
                 </div>
             </nav>
             <div class="icons">
-                <div class="fas fa-search" id="search-btn"></div>
                 <div class="fas fa-shopping-cart" id="cart-btn"></div>
                 <div class="fas fa-bars" id="menu-btn"></div>
             </div>
 
-            <!-- SEARCH TEXT BOX -->
-            <div class="search-form">
-                <input type="search" id="search-box" class="form-control" placeholder="search here...">
-                <label for="search-box" class="fas fa-search"></label>
-            </div>
 
             <!-- CART SECTION -->
             <div class="cart">
@@ -302,245 +290,6 @@
             </div>
         </section>
 
-        <!-- GALLERY SECTION -->
-        <section class="gallery" id="gallery">
-            <h1 class="heading">The <span>Gallery</span></h1>
-            <div class="box-container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery1.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 1</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery2.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 2</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery3.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 3</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br />
-                    <div class="row pic-to-hide">
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery4.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 4</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery4.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 4</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/gallery5.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <h3 class="gallery-title">Picture 5</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div><br />
-                    <center>
-                        <button id="showBtn" class="btn btn-dark">SHOW MORE</button>
-                    </center> 
-                </div> 
-            </div>
-        </section>
-
-        <!-- BLOGS SECTION -->
-        <section class="blogs" id="blogs">
-            <h1 class="heading">Our <span>Blogs</span></h1>
-            <div class="box-container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/pour.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <a href="https://www.thewaytocoffee.com/batch-brew-vs-pour-over/" target="_blank" class="title text-decoration-none">Batch Brew vs. Pour Over | The Pros and Cons Experienced by Coffee Professionals</a>
-                                    <span>by The Way to Coffee</span>
-                                    <p>Thinking back 15-20 years, I remember my parents going about their morning ritual of brewing coffee on weekends before burying...</p>
-                                    <center>
-                                        <a href="https://www.thewaytocoffee.com/batch-brew-vs-pour-over/" target="_blank" class="btn">Read More</a>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/carbon.webp" alt="">
-                                </div>
-                                <div class="content">
-                                    <a href="https://www.taylorsofharrogate.co.uk/news/carbon-neutral-tea-and-coffee" target="_blank" class="title text-decoration-none">Carbon Neutral Tea and Coffee</a>
-                                    <span>by Taylors editorial team</span>
-                                    <p>All our tea and coffee is carbon neutral – but what does that actually mean? Here’s an explanation of how we’ve lowered our carbon footprint, and the three projects in Kenya, Malawi and Uganda which have reduced the emissions of our products to...</p>
-                                    <center>
-                                        <a href="https://www.taylorsofharrogate.co.uk/news/carbon-neutral-tea-and-coffee" target="_blank" class="btn">Read More</a>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <div class="image">
-                                    <img src="../assets/images/coffeemaker.jpg" alt="">
-                                </div>
-                                <div class="content">
-                                    <a href="https://coffeestylish.com/best-drip-coffee-makers/" target="_blank" class="title text-decoration-none">BEST DRIP COFFEE MAKERS 2020</a>
-                                    <span>by CoffeeStylish.com</span>
-                                    <p>What is a good coffee maker? A good home coffee maker should have removable parts so it can be cleaned completely because you don’t want mold or buildups in your machine. It should be fast. It...</p>
-                                    <center>
-                                        <a href="https://coffeestylish.com/best-drip-coffee-makers/" target="_blank" class="btn">Read More</a>
-                                    </center>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </section>
-
-        <!-- TESTIMONIALS SECTION -->
-        <section class="review" id="review">
-            <h1 class="heading"><span>Testimo</span>nials</h1>
-            <div class="box-container">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box">
-                                <img src="../assets/images/quote-img.png" alt="" class="quote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-1.png" alt="" class="user">
-                                <h3>Jane Doe</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <img src="../assets/images/quote-img.png" alt="" class="quote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-2.png" alt="" class="user">
-                                <h3>John Doe</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box">
-                                <img src="../assets/images/quote-img.png" alt="" class="quote">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                                <img src="../assets/images/pic-3.png" alt="" class="user">
-                                <h3>Jane Doe</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-        </section>
-
         <!-- CONTACT US SECTION -->
         <section class="contact" id="contact">
             <h1 class="heading"><span>Contact</span> Us</h1>
@@ -605,43 +354,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- CHAT BAR BLOCK -->
-        <div class="chat-bar-collapsible">
-            <button id="chat-button" type="button" class="collapsible">Chat with us! &nbsp;
-                <i id="chat-icon" style="color: #fff;" class="fas fa-comments"></i>
-            </button>
-            <div class="content">
-                <div class="full-chat-block">
-                    <!-- Message Container -->
-                    <div class="outer-container">
-                        <div class="chat-container">
-                            <!-- Messages -->
-                            <div id="chatbox">
-                                <h5 id="chat-timestamp"></h5>
-                                <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                            </div>
-                            <!-- User input box -->
-                            <div class="chat-bar-input-block">
-                                <div id="userInput">
-                                    <input id="textInput" class="input-box" type="text" name="msg"
-                                        placeholder="Tap 'Enter' to send a message">
-                                    <p></p>
-                                </div>
-                                <div class="chat-bar-icons">
-                                    <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-paper-plane"
-                                        onclick="sendButton()"></i>
-                                </div>
-                            </div>
-                            <div id="chat-bar-bottom">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
         <!-- JS File Link -->
         <script src="../assets/js/googleSignIn.js"></script>
         <script src="../assets/js/script.js"></script>
@@ -704,6 +417,25 @@
 function redirectToCheckout(name, price, quantity) {
     // Redirect to checkout.php and pass parameters in the URL
     window.location.href = 'checkout.php?name=' + encodeURIComponent(name) + '&price=' + encodeURIComponent(price) + '&quantity=' + encodeURIComponent(quantity);
+}
+function addToCart(button) {
+    var productBox = button.closest('.box');
+    var productName = productBox.querySelector('.product-title').textContent.trim();
+    var productPrice = parseFloat(productBox.querySelector('.price').textContent.replace('₱', '').trim());
+
+    // Example: AJAX to addToCart.php
+    $.ajax({
+        url: 'addToCart.php',
+        method: 'POST',
+        data: { name: productName, price: productPrice },
+        success: function(response) {
+            // Update UI: Show success message or update cart total
+            alert('Product added to cart!');
+        },
+        error: function(xhr, status, error) {
+            console.error('Error adding to cart:', error);
+        }
+    });
 }
         </script> 
     </body>

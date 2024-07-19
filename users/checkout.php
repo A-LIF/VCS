@@ -1,3 +1,14 @@
+<?php
+  session_start();
+
+  // Check if chosen product details are stored in session
+  if (isset($_SESSION['chosenProduct'])) {
+    $chosenProduct = json_decode($_SESSION['chosenProduct'], true); // Decode JSON string
+  } else {
+    // Handle the case where no product is chosen (optional: display message)
+    $chosenProduct = null;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,61 +30,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!-- font awesome cdn link -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"><!-- Favicon / Icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- Google font cdn link -->
-    <style>
-        .size-select {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        .payment-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .delivery-form {
-            margin-bottom: 20px;
-        }
-
-        .payment-methods {
-            margin-top: 20px;
-        }
-
-        .size-select {
-            width: 100%;
-            padding: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        .product-details {
-            background-color: #f8f9fa; /* Example background color */
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .credit-card-form {
-            background-color: #f8f9fa; /* Example background color */
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .center-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Adjust as needed */
-        }
-    </style>
+ 
 </head>
 <body>
     <!-- HEADER SECTION -->
     <header class="header">
         <a href="#" class="logo">
-            <img src="../assets/images/logo.png" class="img-logo" alt="KapeTann Logo">
+            <img src="../assets/images/logo.png" style="position: relative;" class="img-logo" alt="KapeTann Logo">
         </a>
 
         <!-- MAIN MENU FOR SMALLER DEVICES -->
@@ -96,23 +59,18 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Icons for Cart and Menu -->
         <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn" onclick="redirectCart()"></div>
             <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-
-        <!-- SEARCH TEXT BOX -->
-        <div class="search-form">
-            <input type="search" id="search-box" class="form-control" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
         </div>
 
         <!-- CART SECTION -->
         <div class="cart">
             <h2 class="cart-title">Your Cart:</h2>
             <div class="cart-content">
-                
+                <!-- Cart content goes here -->
             </div>
             <div class="total">
                 <div class="total-title">Total: </div>
@@ -123,8 +81,8 @@
         </div>
     </header>
 
-<!-- MAIN CONTENT SECTION -->
-<main class="main-content">
+    <!-- MAIN CONTENT SECTION -->
+    <main class="main-content">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -133,7 +91,7 @@
                         <h2>Product Details</h2>
                         <?php
                         // Check if product details are passed via URL
-                        if (isset($_GET['title']) && isset($_GET['price']) && isset($_GET['quantity']) && isset($_GET['subtotal_amount']) && isset($_GET['size'])) {
+                        if (isset($_GET['title'], $_GET['price'], $_GET['quantity'], $_GET['subtotal_amount'], $_GET['size'])) {
                             $title = $_GET['title'];
                             $price = $_GET['price'];
                             $quantity = $_GET['quantity'];
@@ -199,6 +157,7 @@
             </div>
         </div>
     </main>
+
 
 
     <!-- JS File Links -->
